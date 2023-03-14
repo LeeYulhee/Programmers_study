@@ -1,24 +1,21 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 class Solution {
     public int[] solution(int[] numbers, String direction) {
-        ArrayList<Integer> list = new ArrayList<>();
-        
-        for(int i : numbers){
-            list.add(i);
+        int[] answer = new int[numbers.length];
+        for(int i=0; i<numbers.length; i++){
+            if(direction.equals("right")){
+                if(i < numbers.length-1){
+                    answer[i+1] = numbers[i];
+                }else{
+                    answer[0] = numbers[i];
+                }
+            }else{
+                if(i == 0){
+                    answer[numbers.length-1] = numbers[0];
+                }else{
+                    answer[i-1] = numbers[i];
+                }
+            }
         }
-
-        if(direction.equals("right")){
-            list.add(0, list.get(list.size()-1));
-            list.remove(list.size()-1);
-        } else {
-            list.add(list.size(), list.get(0));
-            list.remove(0);
-        }
-        int[] answer = list.stream().mapToInt(i->i).toArray();
-        
-        
         return answer;
     }
 }
