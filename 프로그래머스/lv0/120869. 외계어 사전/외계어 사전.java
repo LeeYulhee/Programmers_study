@@ -1,19 +1,24 @@
 class Solution {
     public int solution(String[] spell, String[] dic) {
-        int answer = 0;
-        for (String s : dic) {
-            String tmp = s;
-            for(int i = 0; i < spell.length; i++) {
-                if (s.length() == spell.length) {
-                    tmp = tmp.replaceFirst(spell[i], "");
-                    System.out.println(tmp);
+        int answer = 2;
+
+
+        for(String dicS : dic) {
+
+            boolean isRight = true;
+            for(String spellS : spell) {
+                if(dicS.indexOf(spellS) == -1) {
+                    isRight = false;
+                    break;
                 }
             }
-            if (tmp.equals("")) {
+
+            if(isRight) {
                 answer = 1;
                 break;
-            } else answer = 2;
+            }
         }
+
         return answer;
     }
 }
