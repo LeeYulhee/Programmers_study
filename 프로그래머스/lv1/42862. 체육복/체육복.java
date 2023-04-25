@@ -16,11 +16,9 @@ class Solution {
         }
 
         for(int i = 0; i < lost.length; i++) {
-            for(int j = 0; j < reserve.length; j++) {
-                if(reserveList.contains(lost[i]) && lostList.contains(lost[i])) {
-                    reserveList.remove(reserveList.indexOf(lost[i]));
-                    lostList.remove(lostList.indexOf(lost[i]));
-                }
+            if(reserveList.contains(lost[i]) && lostList.contains(lost[i])) {
+                reserveList.remove(reserveList.indexOf(lost[i]));
+                lostList.remove(lostList.indexOf(lost[i]));
             }
         }
 
