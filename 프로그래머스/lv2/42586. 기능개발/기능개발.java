@@ -18,7 +18,7 @@ class Solution {
             if(day >= queue.peek()) {
                 count++;
                 queue.poll();
-            } else if (day < queue.peek()) {
+            } else {
                 list.add(count);
                 day = queue.poll();
                 count = 1;
