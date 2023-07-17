@@ -2,9 +2,6 @@ import java.util.*;
 
 class Solution {
     public String solution(String[] cards1, String[] cards2, String[] goal) {
-        
-        String answer = "Yes";
-
         Queue<String> queueCards1 = new LinkedList<>();
 
         for (String s : cards1) {
@@ -27,6 +24,6 @@ class Solution {
             }
         }
         
-        return answer;
+        return "Yes";
     }
 }
