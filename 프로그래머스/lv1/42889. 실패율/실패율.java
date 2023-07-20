@@ -6,15 +6,7 @@ class Solution {
 
         Arrays.sort(stages);
 
-        int clearPersonLength = 0;
-
-        if (N > stages[stages.length - 1]) {
-            clearPersonLength = N + 1;
-        } else {
-            clearPersonLength = stages[stages.length - 1] + 1;
-        }
-
-        int[] clearPerson = new int[clearPersonLength];
+        int[] clearPerson = new int[N + 2];
 
         for(int i : stages) {
             clearPerson[i]++;
