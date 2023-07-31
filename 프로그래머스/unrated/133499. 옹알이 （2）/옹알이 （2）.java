@@ -8,13 +8,11 @@ class Solution {
         for(int i = 0; i < babbling.length; i++) {
             for(String s : babblingList) {
                 if(!babbling[i].contains(s + s)) {
-                    babbling[i] = babbling[i].replace(s, "X");
+                    babbling[i] = babbling[i].replace(s, " ");
                 }
             }
-
-            babbling[i] = babbling[i].replace("X", "");
             
-            if(babbling[i].equals("")) {
+            if(babbling[i].trim().equals("")) {
                 answer++;
             }
         }
