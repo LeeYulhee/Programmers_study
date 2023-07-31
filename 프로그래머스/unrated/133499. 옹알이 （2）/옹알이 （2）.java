@@ -7,7 +7,7 @@ class Solution {
         
         for(int i = 0; i < babbling.length; i++) {
             for(String s : babblingList) {
-                if(!babbling[i].contains(s + s) && babbling[i].contains(s)) {
+                if(!babbling[i].contains(s + s)) {
                     babbling[i] = babbling[i].replace(s, "X");
                 }
             }
@@ -18,6 +18,7 @@ class Solution {
                 answer++;
             }
         }
+        
         return answer;
     }
 }
