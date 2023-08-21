@@ -2,6 +2,7 @@ import java.util.*;
 
 class Solution {
     public String solution(String[] survey, int[] choices) {
+        
         Map<Character, Integer> choicesMap = new HashMap<>();
         
         char[] type = {'R', 'T', 'C', 'F', 'J', 'M', 'A', 'N'};
@@ -12,9 +13,6 @@ class Solution {
         
         for(int i = 0; i < survey.length; i++) {
             int changeScore;
-            if(choices[i] == 4) {
-                continue;
-            }
             if(choices[i] < 4) {
                 changeScore = (choices[i] - 4) * - 1;
                 choicesMap.put(survey[i].charAt(0), choicesMap.get(survey[i].charAt(0)) + changeScore);
