@@ -2,8 +2,6 @@ import java.util.*;
 
 class Solution {
     public String solution(String[] survey, int[] choices) {
-        String answer = "";
-        
         Map<Character, Integer> choicesMap = new HashMap<>();
         
         char[] type = {'R', 'T', 'C', 'F', 'J', 'M', 'A', 'N'};
