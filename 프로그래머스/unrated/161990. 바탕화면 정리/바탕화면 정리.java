@@ -21,6 +21,7 @@ class Solution {
                 if (rdx < i) {
                     rdx = i;
                 }
+                
                 for(int j = 0; j < element.length(); j++) {
                     
                     char oneElement = element.charAt(j);
