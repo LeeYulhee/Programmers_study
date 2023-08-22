@@ -18,8 +18,8 @@ class Solution {
                 if(lux > i) {
                     lux = i;
                 }
-                if (rdx < i + 1) {
-                    rdx = i + 1;
+                if (rdx < i) {
+                    rdx = i;
                 }
                 for(int j = 0; j < element.length(); j++) {
                     
@@ -28,17 +28,14 @@ class Solution {
                     if(oneElement == '#' && luy > j) {
                         luy = j;
                     }
-                    if (oneElement == '#' && rdy < j + 1) {
-                        rdy = j + 1;
+                    if (oneElement == '#' && rdy < j) {
+                        rdy = j;
                     }
                 }
             }
         }
         
-        rdx = lux == rdx? rdx + 1 : rdx;
-        rdy = luy == rdy? rdy + 1 : rdy;
-        
-        int[] answer = {lux, luy, rdx, rdy};
+        int[] answer = {lux, luy, rdx + 1, rdy + 1};
         
         return answer;
     }
