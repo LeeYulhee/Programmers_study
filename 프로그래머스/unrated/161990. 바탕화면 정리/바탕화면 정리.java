@@ -2,15 +2,13 @@ class Solution {
     public int[] solution(String[] wallpaper) {
         
         // 가장 위의 #, 가장 왼쪽 #, 가장 밑의 #, 가장 오른쪽의 #
-
-        int wallpaperLength = wallpaper.length;
         
-        int lux = wallpaperLength;
+        int lux = wallpaper.length;
         int luy = wallpaper[0].length();
         int rdx = 0;
         int rdy = 0;
         
-        for(int i = 0; i < wallpaperLength; i++) {
+        for(int i = 0; i < wallpaper.length; i++) {
             
             String element = wallpaper[i];
             
