@@ -25,8 +25,6 @@ class Solution {
             
             privacyMonth = privacyMonth + changeMonth;
             
-            
-            
             if(privacyDay == 1) {
                 privacyDay = 28;
                 privacyMonth--;
