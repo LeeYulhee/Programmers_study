@@ -17,8 +17,6 @@ class Solution {
             char direction = s.charAt(0);
             int distance = s.charAt(2) - '0';
             
-            System.out.println("y : " + y + " x : " + x);
-            
             switch(direction) {
                 case 'E' : x = checkX(park, distance); break;
                 case 'W' : x = checkX(park, distance * - 1); break;
