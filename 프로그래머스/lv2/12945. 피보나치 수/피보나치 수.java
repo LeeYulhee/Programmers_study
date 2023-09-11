@@ -11,7 +11,7 @@ class Solution {
             answerBefore = temp;
         }
         
-        return (int)answer;
+        return answer;
         
     }
 }
