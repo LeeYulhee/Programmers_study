@@ -12,7 +12,7 @@ class Solution {
             int talker = i % n + 1;
             turn = i / n + 1;
             
-            if ((i != 0 && lastLetter != words[i].charAt(0)) || word.contains(words[i]))  {
+            if ((i != 0 && lastLetter != words[i].charAt(0)) || word.contains(words[i])) {
                 return new int[]{talker, turn};
             }
 
