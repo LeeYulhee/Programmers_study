@@ -9,17 +9,13 @@ class Solution {
         Set<String> word = new HashSet<>();
         
         for(int i = 0; i < words.length; i++) {
-            int talker = (i + 1) % n == 0 ? n : (i + 1) % n;
+            int talker = i % n + 1;
             turn = i / n + 1;
             
-            if (i != 0 && lastLetter != words[i].charAt(0)) {
+            if ((i != 0 && lastLetter != words[i].charAt(0)) || word.contains(words[i]))  {
                 return new int[]{talker, turn};
             }
-            
-            if (word.contains(words[i])) {
-                return new int[]{talker, turn};
-            }
-            
+
             word.add(words[i]);
             
             lastLetter = words[i].charAt(words[i].length() - 1);
