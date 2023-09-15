@@ -6,7 +6,7 @@ class Solution {
         char lastLetter = words[0].charAt(words[0].length() - 1);
         int turn = 0;
         
-        Map<String, int[]> word = new HashMap<>();
+        Set<String> word = new HashSet<>();
         
         for(int i = 0; i < words.length; i++) {
             int talker = (i + 1) % n == 0 ? n : (i + 1) % n;
@@ -16,11 +16,11 @@ class Solution {
                 return new int[]{talker, turn};
             }
             
-            if (word.get(words[i]) != null) {
+            if (word.contains(words[i])) {
                 return new int[]{talker, turn};
             }
             
-            word.put(words[i], new int[]{talker, turn});
+            word.add(words[i]);
             
             lastLetter = words[i].charAt(words[i].length() - 1);
         }
