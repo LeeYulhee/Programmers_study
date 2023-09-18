@@ -10,7 +10,6 @@ class Solution {
         
         for(int i = 0; i < people.length; i++) {
             int left = i;
-            int rightCounter = 0;
             
             if(right < left) break;
             
