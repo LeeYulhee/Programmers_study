@@ -4,12 +4,12 @@ class Solution {
         int min = Math.min(a, b);
         int max = Math.max(a, b);
         
-        int round = 0;
+        int round = 1;
         
         while(true) {
 
             if(max - min ==  1 && (min - 1) / 2 == (max - 1) / 2) {
-                return round + 1;
+                return round;
             }
             
             min = min % 2 == 1 ? (min + 1) / 2 : min / 2;
