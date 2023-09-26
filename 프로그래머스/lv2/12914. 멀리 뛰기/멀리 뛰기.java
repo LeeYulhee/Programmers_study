@@ -10,7 +10,6 @@ class Solution {
             answer = (answer + beforeNum) % 1234567;
             beforeNum = temp;
             
-            
         }
         
         return answer;
