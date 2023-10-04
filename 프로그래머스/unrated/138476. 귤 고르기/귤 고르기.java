@@ -4,27 +4,27 @@ class Solution {
     public int solution(int k, int[] tangerine) {
         
         int total = 0;
+        int answer = 0;
         int tangerineLength = tangerine.length;
         
         Arrays.sort(tangerine);
         
-        Integer[] typeIndex = new Integer[tangerine[tangerineLength - 1] + 1];
-        
-        Arrays.fill(typeIndex, 0);
+        int[] typeIndex = new int[tangerine[tangerineLength - 1] + 1];
         
         for(int i : tangerine) {
             typeIndex[i]++;
         }
         
-        Arrays.sort(typeIndex, Collections.reverseOrder());
+        Arrays.sort(typeIndex);
         
-        for(int i = 0; i < typeIndex.length; i++) {
+        for(int i = typeIndex.length - 1; i >= 0; i--) {
+            answer++;
             total += typeIndex[i];
             if(total >= k) {
-                return i + 1;
+                return answer;
             }
         }
         
-        return 0;
+        return answer;
     }
 }
