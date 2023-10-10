@@ -25,10 +25,6 @@ class Solution {
                     if((stackChar == '[' && temp == ']') || (stackChar == '(' && temp == ')') || (stackChar == '{' && temp == '}')) {
                         stack.pop();
                         check++;
-                        continue;
-                    } else {
-                        stack.push(temp);
-                        break;
                     }
                 }
             }
