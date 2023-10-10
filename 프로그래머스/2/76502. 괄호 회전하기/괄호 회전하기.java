@@ -33,7 +33,7 @@ class Solution {
                 }
             }
             
-            if(check == (int)Math.ceil(sLength / 2)) {
+            if(check == sLength / 2) {
                 answer++;
             }
         }
