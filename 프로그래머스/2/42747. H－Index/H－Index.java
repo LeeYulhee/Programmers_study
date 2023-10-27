@@ -3,8 +3,6 @@ import java.util.*;
 class Solution {
     public int solution(int[] citations) {
         
-        int answer;
-        
         // 오름차순 정렬 구현
         Arrays.sort(citations);
         
