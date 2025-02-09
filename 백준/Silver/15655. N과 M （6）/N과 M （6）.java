@@ -39,13 +39,11 @@ public class Main {
             return;
         }
 
-        depth++;
-
         for ( int i = index; i < loopIndex; i++) {
             if (stack.contains(numbers[i])) continue;
 
             stack.push(numbers[i]);
-            recursive(i + 1, depth);
+            recursive(i + 1, depth + 1);
             stack.pop();
         }
     }
