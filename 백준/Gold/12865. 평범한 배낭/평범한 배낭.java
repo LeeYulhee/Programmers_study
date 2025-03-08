@@ -15,7 +15,7 @@ public class Main {
         }
 
         for (int i = 1; i <= N; i++) {
-            for (int w = 0; w <= K; w++) {
+            for (int w = 1; w <= K; w++) {
                 if (weight[i] > w) {  
                     dp[i][w] = dp[i - 1][w];
                 } else {  
