@@ -1,12 +1,9 @@
-SELECT ID
-  FROM ECOLI_DATA
- WHERE PARENT_ID IN (SELECT ID
-                       FROM ECOLI_DATA
-                     WHERE PARENT_ID IS NOT NULL
-                       AND PARENT_ID IN ( SELECT ID
-                                            FROM ECOLI_DATA
-                                          WHERE PARENT_ID IS NULL
-                                        )
-                    )
- ORDER BY ID
+SELECT F.ID
+  FROM ECOLI_DATA AS F
+ INNER JOIN ECOLI_DATA S
+    ON F.PARENT_ID = S.ID
+ INNER JOIN ECOLI_DATA T
+    ON S.PARENT_ID = T.ID
+ WHERE T.PARENT_ID IS NULL
+ ORDER BY F.ID ASC
 ;
