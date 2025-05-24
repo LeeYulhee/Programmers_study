@@ -34,9 +34,13 @@ public class Main {
 
         recursive(1, 0);
 
+        StringBuilder sb = new StringBuilder();
+
         for (int i = 2; i <= n; i++) {
-            System.out.println(parent[i]);
+            sb.append(parent[i] + "\n");
         }
+
+        System.out.println(sb.toString());
     }
 
     private static void recursive(int curr, int pre) {
