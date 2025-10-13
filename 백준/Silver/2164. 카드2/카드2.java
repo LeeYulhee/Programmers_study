@@ -21,14 +21,9 @@ public class Main {
             if (queue.isEmpty()) {
                 answer = trashCard;
                 break;
-            }
-            if (queue.peek() != null) {
+            } else {
                 int number = queue.poll();
                 queue.add(number);
-            }
-            if (queue.size() == 1) {
-                answer = queue.poll();
-                break;
             }
         }
 
