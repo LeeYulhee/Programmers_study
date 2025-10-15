@@ -24,6 +24,7 @@ public class Main {
                     queue.add(current);
                 }
             }
+            System.gc();
         }
 
         System.out.println(queue.peek());
