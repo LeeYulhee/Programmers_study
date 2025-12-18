@@ -34,7 +34,7 @@ public class Main {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 isUsed[i][j] = true;
-                findTetromino(0, 0, i, j);
+                findTetromino(1, board[i][j], i, j);
                 isUsed[i][j] = false;
             }
         }
