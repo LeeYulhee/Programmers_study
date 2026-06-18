@@ -1,2 +1,2 @@
 def solution(angle):
-    return [angle > 0, angle >= 90, angle > 90, angle == 180].count(True)
+    return 1 if angle < 90 else 2 if angle == 90 else 3 if angle < 180 else 4
